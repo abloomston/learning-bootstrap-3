@@ -42,6 +42,14 @@ b, strong {
     color: #fff;
 }
 
+.main-block hr {
+    border-top: 1px solid #c9c9c9;
+}
+
+.main-block .padded {
+  padding: 100px 15px;
+}
+
 .marketing-block {
     background-color: #e9e6df;
 }
