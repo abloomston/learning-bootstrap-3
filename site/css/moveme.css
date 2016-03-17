@@ -21,6 +21,18 @@
     color: #eeefe9;
 }
 
+.info-block a {
+    color: #fff;
+}
+
+.info-block a:hover {
+    color: #333;
+}
+
+.info-block .tab-pane {
+    padding: 40px 10px 0px 10px;
+}
+
 .text-muted {
     color: #e9e6df;
     font-weight: 100;
