@@ -33,6 +33,19 @@
     padding: 40px 10px 0px 10px;
 }
 
+.footer-block {
+  background: #72a694;
+  padding: 80px 0px 60px 0px;
+}
+
+.footer-block address, .footer-block a, .footer-block p {
+  color: white;
+}
+
+.footer-block .extra-spacing {
+  padding: 0px 10px 0px 10px;
+}
+
 .text-muted {
     color: #e9e6df;
     font-weight: 100;
