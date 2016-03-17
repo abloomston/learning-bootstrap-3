@@ -4,6 +4,14 @@
     color: #fff;
 }
 
+.marketing-block {
+    background-color: #e9e6df;
+}
+
+hr {
+    border-top: 1px solid #c9c9c9;
+}
+
 .text-muted {
     color: #e9e6df;
     font-weight: 100;
