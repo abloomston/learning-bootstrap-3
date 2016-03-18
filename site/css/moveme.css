@@ -57,6 +57,17 @@ b, strong {
   background-color: #e9e6df;
 }
 
+.main-block .map {
+  height: 350px;
+  width: 100%;
+}
+
+@media(min-width: 768px) {
+  .main-block .map {
+    height: 500px;
+  }
+}
+
 .blog-main h1 a {
   color: #4b8575;
 }
