@@ -115,3 +115,7 @@ b, strong {
 .tpad {
     padding-top: 20px;
 }
+
+.bpad {
+    padding-bottom: 30px;
+}
