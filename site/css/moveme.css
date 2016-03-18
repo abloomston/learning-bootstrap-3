@@ -50,6 +50,21 @@ b, strong {
   padding: 100px 15px;
 }
 
+.main-block .blog-main {
+}
+
+.main-block .blog-sidebar {
+  background-color: #e9e6df;
+}
+
+.blog-main h1 a {
+  color: #4b8575;
+}
+
+.blog-main p a {
+  color: #ed7337;
+}
+
 .marketing-block {
     background-color: #e9e6df;
 }
