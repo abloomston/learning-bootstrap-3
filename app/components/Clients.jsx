@@ -58,7 +58,7 @@ var Clients = React.createClass({
       <div className="row tpad">
       {clients.map(client => (
         <div className="col-sm-6 col-md-3 bpad" key={client.name}>
-          <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>}>
+          <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
             <img className="img-responsive" src={client.logo} alt="logo"/>
           </OverlayTrigger>
         </div>
