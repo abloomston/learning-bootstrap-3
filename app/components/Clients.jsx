@@ -46,67 +46,67 @@ var Clients = React.createClass({
 
 		return (
       <div>
-      <IntroBlock/>
-      <div className="container padded">
-      <div className="row">
-      <div className="col-lg-12">
-      <h2>Our Clients</h2>
-      <hr/>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-      </div>
-      </div>
-      <div className="row tpad">
-      {clients.map(client => (
-        <div className="col-sm-6 col-md-3 bpad" key={client.name}>
-          <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
-            <img className="img-responsive" src={client.logo} alt="logo"/>
-          </OverlayTrigger>
-        </div>
-      ))}
-      </div>
-      <div className="row">
-        <div className="col-lg-12">
-          <div className="panel-group" id="accordian">
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
-                  <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><span className="glyphicon glyphicon-briefcase"></span> Corporate Clients</a>
-                </h4>
-              </div>
-              <div id="collapseOne" className="panel-collapse collapse">
-                <div className="panel-body">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-                </div>
-              </div>
+        <IntroBlock/>
+        <div className="container padded">
+          <div className="row">
+            <div className="col-lg-12">
+              <h2>Our Clients</h2>
+              <hr/>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </div>
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
-                  <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span className="glyphicon glyphicon-phone"></span> Commercial Clients</a>
-                </h4>
-              </div>
-              <div id="collapseTwo" className="panel-collapse collapse">
-                <div className="panel-body">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+          </div>
+          <div className="row tpad">
+            {clients.map(client => (
+               <div className="col-sm-6 col-md-3 bpad" key={client.name}>
+                 <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
+                   <img className="img-responsive" src={client.logo} alt="logo"/>
+                 </OverlayTrigger>
+               </div>
+             ))}
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="panel-group" id="accordian">
+                <div className="panel panel-default">
+                  <div className="panel-heading">
+                    <h4 className="panel-title">
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><span className="glyphicon glyphicon-briefcase"></span> Corporate Clients</a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" className="panel-collapse collapse">
+                    <div className="panel-body">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h4 className="panel-title">
-                  <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><span className="glyphicon glyphicon-phone"></span> App Store Customers</a>
-                </h4>
-              </div>
-              <div id="collapseThree" className="panel-collapse collapse">
-                <div className="panel-body">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                <div className="panel panel-default">
+                  <div className="panel-heading">
+                    <h4 className="panel-title">
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span className="glyphicon glyphicon-phone"></span> Commercial Clients</a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" className="panel-collapse collapse">
+                    <div className="panel-body">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                    </div>
+                  </div>
+                </div>
+                <div className="panel panel-default">
+                  <div className="panel-heading">
+                    <h4 className="panel-title">
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><span className="glyphicon glyphicon-phone"></span> App Store Customers</a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" className="panel-collapse collapse">
+                    <div className="panel-body">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
       </div>
 		);
 	}
