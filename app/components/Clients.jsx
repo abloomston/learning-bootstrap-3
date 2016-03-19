@@ -2,6 +2,42 @@ var React = require('react');
 
 var Clients = React.createClass({
 	render: function() {
+
+    const clients = [
+      {
+        name: "client one",
+        logo: require("../images/client-logo1.png")
+      },
+      {
+        name: "client two",
+        logo: require("../images/client-logo2.png")
+      },
+      {
+        name: "client three",
+        logo: require("../images/client-logo3.png")
+      },
+      {
+        name: "client four",
+        logo: require("../images/client-logo4.png")
+      },
+      {
+        name: "client five",
+        logo: require("../images/client-logo5.png")
+      },
+      {
+        name: "client six",
+        logo: require("../images/client-logo6.png")
+      },
+      {
+        name: "client seven",
+        logo: require("../images/client-logo7.png")
+      },
+      {
+        name: "client eight",
+        logo: require("../images/client-logo8.png")
+      }
+    ];
+
 		return (
       <div>
         <div className="row">
@@ -12,46 +48,13 @@ var Clients = React.createClass({
           </div>
         </div>
         <div className="row tpad myTooltip">
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client one" className="thumbnail">
-              <img src={require("../images/client-logo1.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client two" className="thumbnail">
-              <img src={require("../images/client-logo2.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client three" className="thumbnail">
-              <img src={require("../images/client-logo3.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client four" className="thumbnail">
-              <img src={require("../images/client-logo4.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client five" className="thumbnail">
-              <img src={require("../images/client-logo5.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client six" className="thumbnail">
-              <img src={require("../images/client-logo6.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client seven" className="thumbnail">
-              <img src={require("../images/client-logo7.png")} alt="logo"/>
-            </a>
-          </div>
-          <div className="col-sm-6 col-md-3 bpad">
-            <a href="#" data-toggle="tooltip" data-original-title="client eight" className="thumbnail">
-              <img src={require("../images/client-logo8.png")} alt="logo"/>
-            </a>
-          </div>
+          {clients.map(client => (
+             <div className="col-sm-6 col-md-3 bpad" key={client.name}>
+               <a href="#" data-toggle="tooltip" data-original-title={client.name} className="thumbnail">
+                 <img src={client.logo} alt="logo"/>
+               </a>
+             </div>
+          ))}
         </div>
         <div className="row">
           <div className="col-lg-12">
