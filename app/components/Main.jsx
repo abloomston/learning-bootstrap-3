@@ -1,5 +1,7 @@
 var React = require('react');
 
+var styles = require('../styles/index.jsx');
+
 var NavBar = require('./NavBar.jsx');
 var MarketingBlock = require('./MarketingBlock.jsx');
 var InfoBlock = require('./InfoBlock.jsx');
