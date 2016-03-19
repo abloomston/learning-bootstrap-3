@@ -1,14 +1,11 @@
-Code from taking [online course](https://www.udemy.com/bootstrap-3/) providing an introduction to bootstrap.
+# Learning Bootstrap 3 (with React thrown in for good measure)
 
-All course provided files are in `course-files/`.
+Site initially built from taking [online course](https://www.udemy.com/bootstrap-3/) providing an introduction to bootstrap, then modified to use React.
 
-To view the site, call `open site/index.html`.
-
-I use [emacs](https://www.gnu.org/software/emacs/) and [impatient-mode](https://github.com/netguy204/imp.el) for easy viewing of files as I edit them:
+## Setup
 
 ```
-(find-file "site/index.html")
-M-x httpd-start
-M-x impatient-mode
-;; Then open http://localhost:8080/imp/live/index.html/
+npm install
+npm run start
+open http://localhost:8080/webpack-dev-server/
 ```
