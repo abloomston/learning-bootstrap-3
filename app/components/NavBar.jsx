@@ -12,7 +12,7 @@ var NavBar = props => (
         <span className="icon-bar"></span>
         <span className="icon-bar"></span>
       </button>
-      <a className="navbar-brand" href="index.html">MoveMe</a>
+      <Link className="navbar-brand" to="/">MoveMe</Link>
     </div>
     <div className="navbar-collapse collapse">
       <ul className="nav navbar-nav">
