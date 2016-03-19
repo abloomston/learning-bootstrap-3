@@ -5,7 +5,7 @@ var Contact = React.createClass({
 		return (
       <div>
         <div className="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4503630462154!2d-122.43176838472998!3d37.77948407975867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580bca0e12fc3%3A0x6223272d4a215f15!2sFoo+Bar%2C+San+Francisco%2C+CA+94115!5e0!3m2!1sen!2sus!4v1458341799154" width="100%" height="100%" frameborder="0" style={{border:0}} allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4503630462154!2d-122.43176838472998!3d37.77948407975867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580bca0e12fc3%3A0x6223272d4a215f15!2sFoo+Bar%2C+San+Francisco%2C+CA+94115!5e0!3m2!1sen!2sus!4v1458341799154" width="100%" height="100%" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
         </div>
         <div className="container padded">
           <div className="row">
@@ -15,13 +15,13 @@ var Contact = React.createClass({
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Nunc eleifend leo vitae magna.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  <strong>Move Me</strong>:</p>
               <form className="form-horizontal tpad" role="form">
                 <div className="form-group">
-                  <label for="email" className="col-lg-2 control-label">Email</label>
+                  <label htmlFor="email" className="col-lg-2 control-label">Email</label>
                   <div className="col-lg-10">
                     <input type="email" className="form-control" id="email" placeholder="Email"/>
                   </div>
                 </div>
                 <div className="form-group tpad">
-                  <label for="message" className="col-lg-2 control-label">Message</label>
+                  <label htmlFor="message" className="col-lg-2 control-label">Message</label>
                   <div className="col-lg-10">
                     <textarea className="form-control" rows="6" id="message" placeholder="Message..."></textarea>
                   </div>
@@ -33,7 +33,7 @@ var Contact = React.createClass({
                 </div>
               </form>
             </div>
-            <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
                   <div className="modal-header">
