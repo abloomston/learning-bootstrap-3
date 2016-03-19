@@ -1,5 +1,9 @@
 var React = require('react');
 
+var Bootstrap = require('react-bootstrap');
+var Tooltip = Bootstrap.Tooltip;
+var OverlayTrigger = Bootstrap.OverlayTrigger;
+
 var Clients = React.createClass({
 	render: function() {
 
@@ -47,12 +51,12 @@ var Clients = React.createClass({
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
           </div>
         </div>
-        <div className="row tpad myTooltip">
+        <div className="row tpad">
           {clients.map(client => (
              <div className="col-sm-6 col-md-3 bpad" key={client.name}>
-               <a href="#" data-toggle="tooltip" data-original-title={client.name} className="thumbnail">
-                 <img src={client.logo} alt="logo"/>
-               </a>
+               <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>}>
+                 <img className="img-responsive" src={client.logo} alt="logo"/>
+               </OverlayTrigger>
              </div>
           ))}
         </div>
