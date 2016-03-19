@@ -1,5 +1,8 @@
 var React = require('react');
 
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+
 var NavBar = props => (
   <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div className="navbar-header">
@@ -13,10 +16,10 @@ var NavBar = props => (
     </div>
     <div className="navbar-collapse collapse">
       <ul className="nav navbar-nav">
-        <li className="active"><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="clients.html">Clients</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/clients">Clients</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
         <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown">Social <b className="caret"></b></a>
           <ul className="dropdown-menu">
