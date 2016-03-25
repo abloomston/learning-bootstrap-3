@@ -2,7 +2,7 @@ import React from 'react';
 
 import IntroBlock from './IntroBlock.jsx';
 
-var Contact = React.createClass({
+const Contact = React.createClass({
 	render: function() {
 		return (
       <div>

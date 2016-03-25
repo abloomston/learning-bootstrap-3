@@ -1,6 +1,6 @@
 import React from 'react';
 
-var InfoBlock = props => (
+const InfoBlock = props => (
   <div className="info-block">
     <div className="container">
       <div className="row">

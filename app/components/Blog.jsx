@@ -2,7 +2,7 @@ import React from 'react';
 
 import IntroBlock from './IntroBlock.jsx';
 
-var Blog = props => (
+const Blog = props => (
   <div>
     <IntroBlock/>
     <div className="container padded">

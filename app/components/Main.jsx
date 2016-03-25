@@ -7,7 +7,7 @@ import MarketingBlock from './MarketingBlock.jsx';
 import InfoBlock from './InfoBlock.jsx';
 import Footer from './Footer.jsx';
 
-var Main = props => (
+const Main = props => (
   <div>
     <NavBar/>
     <div className="main-block">

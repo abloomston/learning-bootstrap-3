@@ -2,7 +2,7 @@ import React from 'react';
 import {Nav, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 
-var NavBar = props => (
+const NavBar = props => (
   /* TODO figure out how to pull this to left. */
   <Navbar inverse fixedTop>
     <Navbar.Header>

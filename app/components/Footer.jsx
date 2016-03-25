@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Footer = props => (
+const Footer = props => (
   <div className="footer-block">
     <div className="container">
       <div className="row">

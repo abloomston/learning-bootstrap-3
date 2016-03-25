@@ -1,6 +1,6 @@
 import React from 'react';
 
-var IntroBlock = props => (
+const IntroBlock = props => (
   <div className="intro-block">
     <div className="container">
       <div className="row">

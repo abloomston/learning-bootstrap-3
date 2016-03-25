@@ -3,7 +3,7 @@ import {Carousel, CarouselItem} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
-var Home = props => (
+const Home = props => (
   <div>
     <Carousel defaultActiveIndex={0} interval={4000}>
       <CarouselItem>

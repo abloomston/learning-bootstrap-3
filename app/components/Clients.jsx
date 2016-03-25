@@ -3,7 +3,7 @@ import {Tooltip, OverlayTrigger} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
-var Clients = React.createClass({
+const Clients = React.createClass({
 	render: function() {
 
     const clients = [

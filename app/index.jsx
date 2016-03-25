@@ -8,7 +8,7 @@ import Blog from './components/Blog.jsx';
 import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 
-var Routes = props => (
+const Routes = props => (
 	<Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
 		<Route path='/' component={Main}>
 		  <IndexRoute component={Home}/>

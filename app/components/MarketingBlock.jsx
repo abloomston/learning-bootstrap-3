@@ -1,6 +1,6 @@
 import React from 'react';
 
-var MarketingBlock = props => (
+const MarketingBlock = props => (
   <div className="marketing-block">
     <div className="container">
       <div className="row">
