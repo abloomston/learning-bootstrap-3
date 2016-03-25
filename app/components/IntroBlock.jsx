@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react';
 
 var IntroBlock = props => (
   <div className="intro-block">

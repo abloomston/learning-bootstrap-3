@@ -1,11 +1,11 @@
-var React = require('react');
+import React from 'react';
 
-var styles = require('../styles/index.jsx');
+import styles from '../styles/index.jsx';
 
-var NavBar = require('./NavBar.jsx');
-var MarketingBlock = require('./MarketingBlock.jsx');
-var InfoBlock = require('./InfoBlock.jsx');
-var Footer = require('./Footer.jsx');
+import NavBar from './NavBar.jsx';
+import MarketingBlock from './MarketingBlock.jsx';
+import InfoBlock from './InfoBlock.jsx';
+import Footer from './Footer.jsx';
 
 var Main = props => (
   <div>

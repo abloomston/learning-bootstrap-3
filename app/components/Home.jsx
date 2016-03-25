@@ -1,10 +1,7 @@
-var React = require('react');
+import React from 'react';
+import {Carousel, CarouselItem} from 'react-bootstrap';
 
-var Bootstrap = require('react-bootstrap');
-var Carousel = Bootstrap.Carousel;
-var CarouselItem = Bootstrap.CarouselItem;
-
-var IntroBlock = require('./IntroBlock.jsx');
+import IntroBlock from './IntroBlock.jsx';
 
 var Home = props => (
   <div>

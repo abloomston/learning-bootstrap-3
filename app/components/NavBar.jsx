@@ -1,18 +1,6 @@
-var React = require('react');
-
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
-
-var ReactBootstrap = require('react-bootstrap');
-var Nav = ReactBootstrap.Nav;
-var Navbar = ReactBootstrap.Navbar;
-var NavItem = ReactBootstrap.NavItem;
-var NavDropdown = ReactBootstrap.NavDropdown;
-var MenuItem = ReactBootstrap.MenuItem;
-
-var ReactRouterBootstrap = require('react-router-bootstrap');
-var LinkContainer = ReactRouterBootstrap.LinkContainer;
-var IndexLinkContainer = ReactRouterBootstrap.IndexLinkContainer;
+import React from 'react';
+import {Nav, Navbar, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 
 var NavBar = props => (
   /* TODO figure out how to pull this to left. */

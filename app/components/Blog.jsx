@@ -1,6 +1,6 @@
-var React = require('react');
+import React from 'react';
 
-var IntroBlock = require('./IntroBlock.jsx');
+import IntroBlock from './IntroBlock.jsx';
 
 var Blog = props => (
   <div>

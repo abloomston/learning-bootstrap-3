@@ -1,10 +1,7 @@
-var React = require('react');
+import React from 'react';
+import {Tooltip, OverlayTrigger} from 'react-bootstrap';
 
-var Bootstrap = require('react-bootstrap');
-var Tooltip = Bootstrap.Tooltip;
-var OverlayTrigger = Bootstrap.OverlayTrigger;
-
-var IntroBlock = require('./IntroBlock.jsx');
+import IntroBlock from './IntroBlock.jsx';
 
 var Clients = React.createClass({
 	render: function() {

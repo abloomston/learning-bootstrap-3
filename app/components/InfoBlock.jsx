@@ -1,6 +1,4 @@
-var React = require('react');
-
-var React = require('react');
+import React from 'react';
 
 var InfoBlock = props => (
   <div className="info-block">
