@@ -3,35 +3,39 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
+var ReactBootstrap = require('react-bootstrap');
+var Nav = ReactBootstrap.Nav;
+var Navbar = ReactBootstrap.Navbar;
+var NavItem = ReactBootstrap.NavItem;
+var NavDropdown = ReactBootstrap.NavDropdown;
+var MenuItem = ReactBootstrap.MenuItem;
+
+var ReactRouterBootstrap = require('react-router-bootstrap');
+var LinkContainer = ReactRouterBootstrap.LinkContainer;
+var IndexLinkContainer = ReactRouterBootstrap.IndexLinkContainer;
+
 var NavBar = props => (
-  <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div className="navbar-header">
-      <button type="button" className="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span className="sr-only">Toggle navigation</span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-        <span className="icon-bar"></span>
-      </button>
-      <Link className="navbar-brand" to="/">MoveMe</Link>
-    </div>
-    <div className="navbar-collapse collapse">
-      <ul className="nav navbar-nav">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/clients">Clients</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li className="dropdown">
-          <a href="#" className="dropdown-toggle" data-toggle="dropdown">Social <b className="caret"></b></a>
-          <ul className="dropdown-menu">
-            <li><a href="https://www.facebook.com">Facebook</a></li>
-            <li><a href="https://www.twitter.com">Twitter</a></li>
-            <li><a href="https://plus.google.com">Google+</a></li>
-            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  /* TODO figure out how to pull this to left. */
+  <Navbar inverse fixedTop>
+    <Navbar.Header>
+      <IndexLinkContainer to="/"><Navbar.Brand>MoveMe</Navbar.Brand></IndexLinkContainer>
+      <Navbar.Toggle/>
+    </Navbar.Header>
+    <Navbar.Collapse>
+      <Nav>
+        <IndexLinkContainer to="/"><NavItem>Home</NavItem></IndexLinkContainer>
+        <LinkContainer to="/blog"><NavItem>Blog</NavItem></LinkContainer>
+        <LinkContainer to="/clients"><NavItem>Clients</NavItem></LinkContainer>
+        <LinkContainer to="/contact"><NavItem>Contact</NavItem></LinkContainer>
+        <NavDropdown title="Social" id="social-links-dropdown">
+          <MenuItem href="https://www.facebook.com">Facebook</MenuItem>
+          <MenuItem href="https://www.twitter.com">Twitter</MenuItem>
+          <MenuItem href="https://plus.google.com">Google+</MenuItem>
+          <MenuItem href="https://www.linkedin.com">LinkedIn</MenuItem>
+        </NavDropdown>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 );
 
 module.exports = NavBar;
