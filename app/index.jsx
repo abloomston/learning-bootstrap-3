@@ -9,7 +9,7 @@ import Clients from './components/Clients.jsx';
 import Contact from './components/Contact.jsx';
 
 var Routes = props => (
-	<Router history={hashHistory}>
+	<Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
 		<Route path='/' component={Main}>
 		  <IndexRoute component={Home}/>
       <Route path='/blog' component={Blog}/>
