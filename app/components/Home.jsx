@@ -5,39 +5,48 @@ import IntroBlock from './IntroBlock.jsx';
 
 const Home = React.createClass({
 	render: function() {
+
+    const slides = [
+      {
+        key: 1,
+        image: require('../images/slide1.jpg'),
+        title: 'MOVE ME',
+        summary: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+        more_text: 'Sign up today',
+        more_link: '#'
+      },
+      {
+        key: 2,
+        image: require('../images/slide2.jpg'),
+        title: 'HEADING 1',
+        summary: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+        more_text: 'Sign up today',
+        more_link: '#'
+      },
+      {
+        key: 3,
+        image: require('../images/slide3.jpg'),
+        title: 'HEADING 2',
+        summary: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+        more_text: 'Sign up today',
+        more_link: '#'
+      }
+    ];
+
 		return (
       <div>
         <Carousel defaultActiveIndex={0} interval={4000}>
-          <CarouselItem>
-            <img src={require("../images/slide1.jpg")}/>
+          {slides.map(slide => (
+          <CarouselItem key={slide.key}>
+            <img src={slide.image}/>
             <div className="container active">
               <div className="carousel-caption">
-                <h1>MOVE ME</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                <p><a href="#" className="btn btn-primary btn-large">Sign up today</a></p>
+                <h1>{slide.title}</h1>
+                <p>{slide.summary}</p>
+                <p><a href={slide.more_link} className="btn btn-primary btn-large">{slide.more_text}</a></p>
               </div>
             </div>
-          </CarouselItem>
-          <CarouselItem>
-            <img src={require("../images/slide2.jpg")}/>
-            <div className="container active">
-              <div className="carousel-caption">
-                <h1>HEADING 2</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.</p>
-                <p><a href="#" className="btn btn-primary btn-large">Sign up today</a></p>
-              </div>
-            </div>
-          </CarouselItem>
-          <CarouselItem>
-            <img src={require("../images/slide3.jpg")}/>
-            <div className="container active">
-              <div className="carousel-caption">
-                <h1>HEADING 3</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor.</p>
-                <p><a href="#" className="btn btn-primary btn-large">Sign up today</a></p>
-              </div>
-            </div>
-          </CarouselItem>
+          </CarouselItem>))}
         </Carousel>
         <IntroBlock/>
         <div className="main-block">
