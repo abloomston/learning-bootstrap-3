@@ -1,35 +1,31 @@
 import React from 'react';
+import {Tabs, Tab} from 'react-bootstrap';
 
 const InfoBlock = props => (
   <div className="info-block">
     <div className="container">
       <div className="row">
-        <div className="col-sm-6 tabbable">
-          <ul id="myTab" className="nav nav-tabs">
-            <li className="active"><a href="#android" data-toggle="tab">Android</a></li>
-            <li><a href="#ios" data-toggle="tab">iOS</a></li>
-            <li><a href="#win" data-toggle="tab">Windows</a></li>
-          </ul>
-          <div className="tab-content">
-            <div className="tab-pane fade in active" id="android">
+        <div className="col-sm-6">
+          <Tabs defaultActiveKey={1}>
+            <Tab eventKey={1} title="Android">
               <p>
                 <img src={require("../images/gplay.jpg")} alt="google" className="pull-right"/>
                 Android... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus.<br/><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star-empty"></span>
               </p>
-            </div>
-            <div className="tab-pane fade in" id="ios">
+            </Tab>
+            <Tab eventKey={2} title="iOS">
               <p>
                 <img src={require("../images/appstore.jpg")} alt="apple" className="pull-right"/>
                 iOS... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus.<br/><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star-empty"></span>
               </p>
-            </div>
-            <div className="tab-pane fade in" id="win">
+            </Tab>
+            <Tab eventKey={3} title="Windows">
               <p>
                 <img src={require("../images/winstore.jpg")} alt="windows" className="pull-right"/>
                 Windows... Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus.<br/><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star"></span><span className="glyphicon glyphicon-star-empty"></span><span className="glyphicon glyphicon-star-empty"></span>
               </p>
-            </div>
-          </div>
+            </Tab>
+          </Tabs>
         </div>
         <div className="col-sm-4 col-sm-offset-2">
           <blockquote>
