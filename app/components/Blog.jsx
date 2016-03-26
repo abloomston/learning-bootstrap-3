@@ -24,6 +24,7 @@ const Blog = React.createClass({
 
     const blogPosts = [
       {
+        key: 1,
         title: "Enhancing Existing Features",
         author_link: "#",
         author_name: "Infinite Skills",
@@ -33,6 +34,7 @@ const Blog = React.createClass({
         full_link: "#",
       },
       {
+        key: 2,
         title: "Speed Mode Boosted",
         author_link: "#",
         author_name: "Infinite Skills",
@@ -42,6 +44,7 @@ const Blog = React.createClass({
         full_link: "#",
       },
       {
+        key: 3,
         title: "Safe Mode Reached Public Beta",
         author_link: "#",
         author_name: "Infinite Skills",
