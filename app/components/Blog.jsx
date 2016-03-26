@@ -9,7 +9,7 @@ const BlogPost = props => (
     <hr/>
     <p><span className="glyphicon glyphicon-time"></span> Posted {props.date}</p>
     <hr/>
-    {props.image && <img src={require(`../images/${props.image}`)} className="img-responsive"/>}
+    {props.image && <img src={props.image} className="img-responsive"/>}
     <hr/>
     <p>
       {props.summary}
@@ -28,7 +28,7 @@ const Blog = React.createClass({
         author_link: "#",
         author_name: "Infinite Skills",
         date: "Oct 11, 2015 at 11:54 AM",
-        image: "blog1.jpg",
+        image: require("../images/blog1.jpg"),
         summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
         full_link: "#",
       },
@@ -37,7 +37,7 @@ const Blog = React.createClass({
         author_link: "#",
         author_name: "Infinite Skills",
         date: "Sept 9, 2015 at 10:54 AM",
-        image: "blog2.jpg",
+        image: require("../images/blog2.jpg"),
         summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
         full_link: "#",
       },
@@ -46,7 +46,7 @@ const Blog = React.createClass({
         author_link: "#",
         author_name: "Infinite Skills",
         date: "July 4, 2015 at 8:54 AM",
-        image: "blog3.jpg",
+        image: require("../images/blog3.jpg"),
         summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
         full_link: "#"
       }
