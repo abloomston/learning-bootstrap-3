@@ -2,54 +2,53 @@ import React from 'react';
 
 import IntroBlock from './IntroBlock.jsx';
 
+const BlogPost = props => (
+  <section>
+    <h1><a href="#">{props.title}</a></h1>
+    <p className="lead"><a href={props.author_link}>{props.author_name}</a></p>
+    <hr/>
+    <p><span className="glyphicon glyphicon-time"></span> Posted {props.date}</p>
+    <hr/>
+    {props.image && <img src={require(`../images/${props.image}`)} className="img-responsive"/>}
+    <hr/>
+    <p>
+      {props.summary}
+    </p>
+    <a className="btn btn-primary" href={props.full_link}>Read More &raquo;</a>
+    <hr/>
+  </section>
+);
+
 const Blog = props => (
   <div>
     <IntroBlock/>
     <div className="container padded">
       <div className="row">
         <div className="col-sm-8 blog-main">
-          <section>
-            <h1><a href="#">Enhancing Existing Features</a></h1>
-            <p className="lead"><a href="index.html">Infinite Skills</a></p>
-            <hr/>
-            <p><span className="glyphicon glyphicon-time"></span> Posted Oct 11, 2015 at 11:54 AM</p>
-            <hr/>
-            <img src={require("../images/blog1.jpg")} className="img-responsive"/>
-            <hr/>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-            </p>
-            <a className="btn btn-primary" href="#">Read More &raquo;</a>
-            <hr/>
-          </section>
-          <section>
-            <h1><a href="#">Speed Mode Boosted</a></h1>
-            <p className="lead"><a href="index.html">Infinite Skills</a></p>
-            <hr/>
-            <p><span className="glyphicon glyphicon-time"></span> Posted Sept 9, 2015 at 10:54 AM</p>
-            <hr/>
-            <img src={require("../images/blog2.jpg")} className="img-responsive"/>
-            <hr/>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-            </p>
-            <a className="btn btn-primary" href="#">Read More &raquo;</a>
-            <hr/>
-          </section>
-          <section>
-            <h1><a href="#">Safe Mode Reached Public Beta</a></h1>
-            <p className="lead"><a href="index.html">Infinite Skills</a></p>
-            <hr/>
-            <p><span className="glyphicon glyphicon-time"></span> Posted July 4, 2015 at 8:54 AM</p>
-            <hr/>
-            <img src={require("../images/blog3.jpg")} className="img-responsive"/>
-            <hr/>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-            </p>
-            <a className="btn btn-primary" href="#">Read More &raquo;</a>
-            <hr/>
-          </section>
+          <BlogPost
+              title="Enhancing Existing Features"
+              author_link="#"
+              author_name="Infinite Skills"
+              date="Oct 11, 2015 at 11:54 AM"
+              image="blog1.jpg"
+              summary="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl."
+              full_link="#" />
+          <BlogPost
+              title="Speed Mode Boosted"
+              author_link="#"
+              author_name="Infinite Skills"
+              date="Sept 9, 2015 at 10:54 AM"
+              image="blog2.jpg"
+              summary="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl."
+              full_link="#" />
+          <BlogPost
+              title="Safe Mode Reached Public Beta"
+              author_link="#"
+              author_name="Infinite Skills"
+              date="July 4, 2015 at 8:54 AM"
+              image="blog3.jpg"
+              summary="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl."
+              full_link="#" />
           <ul className="pagination">
             <li><a href="#">&laquo;</a></li>
             <li className="active"><a href="#">1</a></li>
