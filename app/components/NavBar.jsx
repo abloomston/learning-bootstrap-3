@@ -9,6 +9,7 @@ const NavBar = props => (
       <IndexLinkContainer to="/"><Navbar.Brand>MoveMe</Navbar.Brand></IndexLinkContainer>
       <Navbar.Toggle/>
     </Navbar.Header>
+    /* TODO when clicking a link, this does not collapse */
     <Navbar.Collapse>
       <Nav>
         <IndexLinkContainer to="/"><NavItem>Home</NavItem></IndexLinkContainer>
