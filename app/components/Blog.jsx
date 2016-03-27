@@ -5,7 +5,7 @@ import IntroBlock from './IntroBlock.jsx';
 
 const BlogPost = props => (
   <section>
-    <h1><a href="#">{props.title}</a></h1>
+    <h1><a href={props.full_link}>{props.title}</a></h1>
     <p className="lead"><a href={props.author_link}>{props.author_name}</a></p>
     <hr/>
     <p><Glyphicon glyph="time"/> Posted {props.date}</p>
