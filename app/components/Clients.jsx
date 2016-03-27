@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import {Glyphicon, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -67,7 +67,7 @@ const Clients = React.createClass({
                 <div className="panel panel-default">
                   <div className="panel-heading">
                     <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><span className="glyphicon glyphicon-briefcase"></span> Corporate Clients</a>
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><Glyphicon glyph="briefcase"/> Corporate Clients</a>
                     </h4>
                   </div>
                   <div id="collapseOne" className="panel-collapse collapse">
@@ -79,7 +79,7 @@ const Clients = React.createClass({
                 <div className="panel panel-default">
                   <div className="panel-heading">
                     <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><span className="glyphicon glyphicon-phone"></span> Commercial Clients</a>
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><Glyphicon glyph="phone"/> Commercial Clients</a>
                     </h4>
                   </div>
                   <div id="collapseTwo" className="panel-collapse collapse">
@@ -91,7 +91,7 @@ const Clients = React.createClass({
                 <div className="panel panel-default">
                   <div className="panel-heading">
                     <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><span className="glyphicon glyphicon-phone"></span> App Store Customers</a>
+                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><Glyphicon glyph="phone"/> App Store Customers</a>
                     </h4>
                   </div>
                   <div id="collapseThree" className="panel-collapse collapse">

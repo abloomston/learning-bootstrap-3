@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Tabs, Tab} from 'react-bootstrap';
+import {Glyphicon, Image, Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
 
 const InfoBlock = React.createClass({
@@ -51,8 +51,8 @@ const InfoBlock = React.createClass({
                     <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
                     {app.summary}
                     <br/>
-                    {_.times(app.stars, (i) => <span key={i} className="glyphicon glyphicon-star"></span>)}
-                    {_.times(5 - app.stars, (i) => <span key={i} className="glyphicon glyphicon-star-empty"></span>)}
+                    {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
+                    {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
                   </p>
                 </Tab>
                  ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from 'react-bootstrap';
+import {Glyphicon, Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -8,7 +8,7 @@ const BlogPost = props => (
     <h1><a href="#">{props.title}</a></h1>
     <p className="lead"><a href={props.author_link}>{props.author_name}</a></p>
     <hr/>
-    <p><span className="glyphicon glyphicon-time"></span> Posted {props.date}</p>
+    <p><Glyphicon glyph="time"/> Posted {props.date}</p>
     <hr/>
     {props.image && <Image src={props.image} responsive/>}
     <hr/>
@@ -77,7 +77,7 @@ const Blog = React.createClass({
               <section>
                 <h3 className="tpad">Search</h3>
                 <div className="input-group input-group-lg tpad">
-                  <span className="input-group-addon glyphicon glyphicon-search"></span>
+                  <span className="input-group-addon"><Glyphicon glyph="search"/></span>
                   <input type="text" className="form-control input-lg" placeholder="Search"/>
                   <span className="input-group-btn">
                     <button className="btn btn-default" type="button">Go!</button>
