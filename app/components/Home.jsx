@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Carousel, CarouselItem, Image} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Carousel, CarouselItem, Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -39,52 +39,52 @@ const Home = React.createClass({
           {slides.map(slide => (
           <CarouselItem key={slide.key}>
             <Image src={slide.image}/>
-            <div className="container active">
+            <Grid className="active">
               <div className="carousel-caption">
                 <h1>{slide.title}</h1>
                 <p>{slide.summary}</p>
                 <p><Button bsStyle="primary" bsSize="large" href={slide.more_link}>{slide.more_text}</Button></p>
               </div>
-            </div>
+            </Grid>
           </CarouselItem>))}
         </Carousel>
         <IntroBlock/>
         <div className="main-block">
-          <div className="container padded">
-            <div className="row">
-              <div className="col-lg-12">
+          <Grid className="padded">
+            <Row>
+              <Col lg={12}>
                 <h2>FOUR MODES</h2>
                 <hr/>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-sm-6 col-md-3">
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/speed.jpg")}/>
                 <h3>Speed</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
-              </div>
-              <div className="col-sm-6 col-md-3">
+              </Col>
+              <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/eco.jpg")}/>
                 <h3>Eco Friendly</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
-              </div>
+              </Col>
               <div className="clearfix hidden-md hidden-lg"></div>
-              <div className="col-sm-6 col-md-3">
+              <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/scenic.jpg")}/>
                 <h3>Scenic</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
-              </div>
-              <div className="col-sm-6 col-md-3">
+              </Col>
+              <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/safety.jpg")}/>
                 <h3>Safe</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
-              </div>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Grid>
         </div>
       </div>
     );

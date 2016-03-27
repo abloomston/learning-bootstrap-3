@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from 'react-bootstrap';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -11,9 +11,9 @@ const Contact = React.createClass({
         <div className="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4503630462154!2d-122.43176838472998!3d37.77948407975867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580bca0e12fc3%3A0x6223272d4a215f15!2sFoo+Bar%2C+San+Francisco%2C+CA+94115!5e0!3m2!1sen!2sus!4v1458341799154" width="100%" height="100%" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
         </div>
-        <div className="container padded">
-          <div className="row">
-            <div className="col-sm-8">
+        <Grid className="padded">
+          <Row>
+            <Col sm={8}>
               <h2>Get in touch</h2>
               <hr/>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Nunc eleifend leo vitae magna.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  <strong>Move Me</strong>:</p>
@@ -36,7 +36,7 @@ const Contact = React.createClass({
                   </div>
                 </div>
               </form>
-            </div>
+            </Col>
             <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
               <div className="modal-dialog">
                 <div className="modal-content">
@@ -54,7 +54,7 @@ const Contact = React.createClass({
                 </div>
               </div>
             </div>
-            <div className="col-sm-4">
+            <Col sm={4}>
               <Image circle responsive src={require("../images/office.jpg")}/>
               <hr/>
               <address>
@@ -64,9 +64,9 @@ const Contact = React.createClass({
                 <a href="mailto:contact@move.me">contact@move.me</a><br/>
                 <abbr title="Phone">P:</abbr>123-456-7891
               </address>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
 		);
 	}

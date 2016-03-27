@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Glyphicon, Image} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Glyphicon, Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -59,9 +59,9 @@ const Blog = React.createClass({
     return (
       <div>
         <IntroBlock/>
-        <div className="container padded">
-          <div className="row">
-            <div className="col-sm-8 blog-main">
+        <Grid className="padded">
+          <Row>
+            <Col sm={8} className="blog-main">
               {blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
               <ul className="pagination">
                 <li><a href="#">&laquo;</a></li>
@@ -72,8 +72,8 @@ const Blog = React.createClass({
                 <li><a href="#">5</a></li>
                 <li><a href="#">&raquo;</a></li>
               </ul>
-            </div>
-            <div className="col-sm-4 blog-sidebar">
+            </Col>
+            <Col sm={4} className="blog-sidebar">
               <section>
                 <h3 className="tpad">Search</h3>
                 <div className="input-group input-group-lg tpad">
@@ -107,9 +107,9 @@ const Blog = React.createClass({
                   </div>
                 </div>
               </section>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }

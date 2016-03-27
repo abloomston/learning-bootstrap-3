@@ -1,10 +1,10 @@
 import React from 'react';
-import {Image} from 'react-bootstrap';
+import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 const Footer = props => (
   <div className="footer-block">
-    <div className="container">
-      <div className="row">
+    <Grid>
+      <Row>
         <footer>
           <div className="pull-left extra-spacing">
             <address>
@@ -20,8 +20,8 @@ const Footer = props => (
             <p>&copy; MoveMe, Inc. 2013</p>
           </div>
         </footer>
-      </div>
-    </div>
+      </Row>
+    </Grid>
   </div>
 );
 

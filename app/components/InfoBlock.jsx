@@ -1,5 +1,5 @@
 import React from 'react';
-import {Glyphicon, Image, Tabs, Tab} from 'react-bootstrap';
+import {Grid, Row, Col, Glyphicon, Image, Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
 
 const InfoBlock = React.createClass({
@@ -41,33 +41,33 @@ const InfoBlock = React.createClass({
 
 		return (
       <div className="info-block">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-6">
+        <Grid>
+          <Row>
+            <Col sm={6}>
               <Tabs defaultActiveKey={apps.length ? apps[0].key : undefined}>
                 {apps.map(app => (
-                <Tab key={app.key} eventKey={app.key} title={app.name}>
-                  <p>
-                    <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
-                    {app.summary}
-                    <br/>
-                    {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
-                    {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
-                  </p>
-                </Tab>
+                   <Tab key={app.key} eventKey={app.key} title={app.name}>
+                     <p>
+                       <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
+                       {app.summary}
+                       <br/>
+                       {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
+                       {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
+                     </p>
+                   </Tab>
                  ))}
               </Tabs>
-            </div>
-            <div className="col-sm-4 col-sm-offset-2">
+            </Col>
+            <Col sm={4} smOffset={2}>
               {quotes.map(quote => (
-              <blockquote key={quote.key}>
-                <p>&ldquo;{quote.quote} &rdquo;</p>
-                <small>{quote.name}, <cite title="source title">{quote.source}</cite></small>
-              </blockquote>
-              ))}
-            </div>
-          </div>
-        </div>
+                 <blockquote key={quote.key}>
+                   <p>&ldquo;{quote.quote} &rdquo;</p>
+                   <small>{quote.name}, <cite title="source title">{quote.source}</cite></small>
+                 </blockquote>
+               ))}
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }

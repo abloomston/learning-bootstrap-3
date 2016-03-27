@@ -1,5 +1,5 @@
 import React from 'react';
-import {Glyphicon, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Grid, Row, Col, Glyphicon, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -44,25 +44,25 @@ const Clients = React.createClass({
 		return (
       <div>
         <IntroBlock/>
-        <div className="container padded">
-          <div className="row">
-            <div className="col-lg-12">
+        <Grid className="padded">
+          <Row>
+            <Col lg={12}>
               <h2>Our Clients</h2>
               <hr/>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-            </div>
-          </div>
-          <div className="row tpad">
+            </Col>
+          </Row>
+          <Row className="tpad">
             {clients.map(client => (
-               <div className="col-sm-6 col-md-3 bpad" key={client.name}>
+               <Col sm={6} md={3} className="bpad" key={client.name}>
                  <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
                    <Image src={client.logo} alt={client.name + " logo"} responsive/>
                  </OverlayTrigger>
-               </div>
+               </Col>
              ))}
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
+          </Row>
+          <Row>
+            <Col lg={12}>
               <div className="panel-group" id="accordian">
                 <div className="panel panel-default">
                   <div className="panel-heading">
@@ -101,9 +101,9 @@ const Clients = React.createClass({
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Grid>
       </div>
 		);
 	}
