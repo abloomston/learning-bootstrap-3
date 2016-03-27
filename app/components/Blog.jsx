@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -9,7 +10,7 @@ const BlogPost = props => (
     <hr/>
     <p><span className="glyphicon glyphicon-time"></span> Posted {props.date}</p>
     <hr/>
-    {props.image && <img src={props.image} className="img-responsive"/>}
+    {props.image && <Image src={props.image} responsive/>}
     <hr/>
     <p>
       {props.summary}
@@ -98,7 +99,7 @@ const Blog = React.createClass({
                 <h3 className="tpad">Latest from Twitter</h3>
                 <div className="media tpad">
                   <a className="pull-left" href="#">
-                    <img className="media-object" src={require("../images/user.jpg")} alt="user"/>
+                    <Image src={require("../images/user.jpg")} alt="@jimmy"/>
                   </a>
                   <div className="media-body">
                     <h4 className="media-heading">@Jimmy</h4>

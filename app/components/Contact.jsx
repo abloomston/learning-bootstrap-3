@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -54,7 +55,7 @@ const Contact = React.createClass({
               </div>
             </div>
             <div className="col-sm-4">
-              <img className="img-circle img-responsive" src={require("../images/office.jpg")}/>
+              <Image circle responsive src={require("../images/office.jpg")}/>
               <hr/>
               <address>
                 <h3>MoveMe, Inc.</h3>

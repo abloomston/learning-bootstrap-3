@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tabs, Tab} from 'react-bootstrap';
+import {Image, Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
 
 const InfoBlock = React.createClass({
@@ -48,7 +48,7 @@ const InfoBlock = React.createClass({
                 {apps.map(app => (
                 <Tab key={app.key} eventKey={app.key} title={app.name}>
                   <p>
-                    <img src={app.image} alt={app.name + " store logo"} className="pull-right"/>
+                    <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
                     {app.summary}
                     <br/>
                     {_.times(app.stars, (i) => <span key={i} className="glyphicon glyphicon-star"></span>)}

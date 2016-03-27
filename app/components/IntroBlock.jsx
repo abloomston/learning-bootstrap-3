@@ -1,11 +1,12 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 
 const IntroBlock = props => (
   <div className="intro-block">
     <div className="container">
       <div className="row">
         <div className="col-xs-3">
-          <img className="img-responsive tpad" src={require("../images/moveMe.png")}/>
+          <Image responsive className="tpad" src={require("../images/moveMe.png")}/>
         </div>
         <div className="col-xs-9">
           <h1>MOVE ME <span className="text-muted">&raquo; Your Travel Companion</span></h1>

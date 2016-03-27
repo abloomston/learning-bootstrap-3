@@ -1,11 +1,12 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 
 const MarketingBlock = props => (
   <div className="marketing-block">
     <div className="container">
       <div className="row">
         <div className="col-sm-6">
-          <img className="img-responsive" src={require("../images/app.png")}/>
+          <Image responsive src={require("../images/app.png")}/>
         </div>
         <div className="col-sm-6">
           <h3 className="tpad">MARKETING SLOGAN HERE</h3><hr/>

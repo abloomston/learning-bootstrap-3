@@ -1,5 +1,5 @@
 import React from 'react';
-import {Tooltip, OverlayTrigger} from 'react-bootstrap';
+import {Image, Tooltip, OverlayTrigger} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -56,7 +56,7 @@ const Clients = React.createClass({
             {clients.map(client => (
                <div className="col-sm-6 col-md-3 bpad" key={client.name}>
                  <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
-                   <img className="img-responsive" src={client.logo} alt="logo"/>
+                   <Image src={client.logo} alt={client.name + " logo"} responsive/>
                  </OverlayTrigger>
                </div>
              ))}

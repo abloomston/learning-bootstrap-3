@@ -1,4 +1,5 @@
 import React from 'react';
+import {Image} from 'react-bootstrap';
 
 const Footer = props => (
   <div className="footer-block">
@@ -15,7 +16,7 @@ const Footer = props => (
             </address>
           </div>
           <div className="pull-right extra-spacing">
-            <img className="img-responsive" src={require("../images/moveMe.png")}/>
+            <Image responsive src={require("../images/moveMe.png")}/>
             <p>&copy; MoveMe, Inc. 2013</p>
           </div>
         </footer>
