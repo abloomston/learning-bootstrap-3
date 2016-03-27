@@ -1,5 +1,5 @@
 import React from 'react';
-import {Glyphicon, Image} from 'react-bootstrap';
+import {Button, Glyphicon, Image} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -15,7 +15,7 @@ const BlogPost = props => (
     <p>
       {props.summary}
     </p>
-    <a className="btn btn-primary" href={props.full_link}>Read More &raquo;</a>
+    <Button bsStyle="primary" href={props.full_link}>Read More &raquo;</Button>
     <hr/>
   </section>
 );
