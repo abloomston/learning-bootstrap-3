@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Image} from 'react-bootstrap';
+import {Grid, Row, Col, ButtonInput, Image, Input} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -18,23 +18,9 @@ const Contact = React.createClass({
               <hr/>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Nunc eleifend leo vitae magna.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  <strong>Move Me</strong>:</p>
               <form className="form-horizontal tpad" role="form">
-                <div className="form-group">
-                  <label htmlFor="email" className="col-lg-2 control-label">Email</label>
-                  <div className="col-lg-10">
-                    <input type="email" className="form-control" id="email" placeholder="Email"/>
-                  </div>
-                </div>
-                <div className="form-group tpad">
-                  <label htmlFor="message" className="col-lg-2 control-label">Message</label>
-                  <div className="col-lg-10">
-                    <textarea className="form-control" rows="6" id="message" placeholder="Message..."></textarea>
-                  </div>
-                </div>
-                <div className="form-group tpad">
-                  <div className="col-lg-offset-2 col-lg-10">
-                    <a data-toggle="modal" href="#myModal" className="btn btn-default btn-lg">Send</a>
-                  </div>
-                </div>
+                <Input type="text" label="Email" labelClassName="col-lg-2" wrapperClassName="col-lg-10" placeholder="Email"/>
+                <Input type="textarea" label="Message" labelClassName="col-lg-2" wrapperClassName="col-lg-10" rows={6} placeholder="Mesage..."/>
+                <ButtonInput type="submit" bsStyle="default" bsSize="large" wrapperClassName="tpad col-lg-offset-2 col-lg-10" value="Send"/>
               </form>
             </Col>
             <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
