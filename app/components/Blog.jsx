@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Pagination} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Media, Pagination} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -96,15 +96,15 @@ const Blog = React.createClass({
               </section>
               <section>
                 <h3 className="tpad">Latest from Twitter</h3>
-                <div className="media tpad">
-                  <a className="pull-left" href="#">
-                    <Image src={require("../images/user.jpg")} alt="@jimmy"/>
-                  </a>
-                  <div className="media-body">
-                    <h4 className="media-heading">@Jimmy</h4>
+                <Media className="tpad">
+                  <Media.Left>
+                    <a href="#"><Image src={require("../images/user.jpg")} alt="@jimmy"/></a>
+                  </Media.Left>
+                  <Media.Body>
+                    <Media.Heading componentClass="h4">@Jimmy</Media.Heading>
                     <p className="bpad">Can't believe how good this @MoveMe app is, blah blah blah.</p>
-                  </div>
-                </div>
+                  </Media.Body>
+                </Media>
               </section>
             </Col>
           </Row>
