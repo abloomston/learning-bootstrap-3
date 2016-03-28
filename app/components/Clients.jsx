@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Glyphicon, Image, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {Grid, Row, Col, Glyphicon, Image, Panel, PanelGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -63,44 +63,17 @@ const Clients = React.createClass({
           </Row>
           <Row>
             <Col lg={12}>
-              <div className="panel-group" id="accordian">
-                <div className="panel panel-default">
-                  <div className="panel-heading">
-                    <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseOne"><Glyphicon glyph="briefcase"/> Corporate Clients</a>
-                    </h4>
-                  </div>
-                  <div id="collapseOne" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-                    </div>
-                  </div>
-                </div>
-                <div className="panel panel-default">
-                  <div className="panel-heading">
-                    <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseTwo"><Glyphicon glyph="phone"/> Commercial Clients</a>
-                    </h4>
-                  </div>
-                  <div id="collapseTwo" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-                    </div>
-                  </div>
-                </div>
-                <div className="panel panel-default">
-                  <div className="panel-heading">
-                    <h4 className="panel-title">
-                      <a className="accordian-toggle" data-toggle="collapse" data-parent="#accordian" href="#collapseThree"><Glyphicon glyph="phone"/> App Store Customers</a>
-                    </h4>
-                  </div>
-                  <div id="collapseThree" className="panel-collapse collapse">
-                    <div className="panel-body">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <PanelGroup accordion>
+                <Panel header={<h4><Glyphicon glyph="briefcase"/> Corporate Clients</h4>} eventKey="1">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                </Panel>
+                <Panel header={<h4><Glyphicon glyph="phone"/> Commercial Clients</h4>} eventKey="2">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                </Panel>
+                <Panel header={<h4><Glyphicon glyph="phone"/> App Store Customers</h4>} eventKey="3">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
+                </Panel>
+              </PanelGroup>
             </Col>
           </Row>
         </Grid>
