@@ -39,13 +39,11 @@ const Home = React.createClass({
           {slides.map(slide => (
           <CarouselItem key={slide.key}>
             <Image src={slide.image}/>
-            <Grid className="active">
-              <div className="carousel-caption">
-                <h1>{slide.title}</h1>
-                <p>{slide.summary}</p>
-                <p><Button bsStyle="primary" bsSize="large" href={slide.more_link}>{slide.more_text}</Button></p>
-              </div>
-            </Grid>
+            <div className="carousel-caption">
+              <h1>{slide.title}</h1>
+              <p>{slide.summary}</p>
+              <p><Button bsStyle="primary" bsSize="large" href={slide.more_link}>{slide.more_text}</Button></p>
+            </div>
           </CarouselItem>))}
         </Carousel>
         <IntroBlock/>
