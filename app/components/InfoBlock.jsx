@@ -47,13 +47,11 @@ const InfoBlock = React.createClass({
               <Tabs defaultActiveKey={apps.length ? apps[0].key : undefined}>
                 {apps.map(app => (
                    <Tab key={app.key} eventKey={app.key} title={app.name}>
-                     <p>
-                       <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
-                       {app.summary}
-                       <br/>
-                       {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
-                       {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
-                     </p>
+                     <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
+                     {app.summary}
+                     <br/>
+                     {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
+                     {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
                    </Tab>
                  ))}
               </Tabs>
