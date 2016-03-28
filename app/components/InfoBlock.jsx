@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Glyphicon, Image, Tabs, Tab} from 'react-bootstrap';
+import {Grid, Row, Col, Glyphicon, Image, Media, Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
 
 const InfoBlock = React.createClass({
@@ -47,11 +47,17 @@ const InfoBlock = React.createClass({
               <Tabs defaultActiveKey={apps.length ? apps[0].key : undefined}>
                 {apps.map(app => (
                    <Tab key={app.key} eventKey={app.key} title={app.name}>
-                     <Image src={app.image} alt={app.name + " store logo"} className="pull-right"/>
-                     {app.summary}
-                     <br/>
-                     {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
-                     {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
+                     <Media>
+                       <Media.Body>
+                         {app.summary}
+                         <br/>
+                         {_.times(app.stars, (i) => <Glyphicon key={i} glyph="star"/>)}
+                         {_.times(5 - app.stars, (i) => <Glyphicon key={i} glyph="star-empty"/>)}
+                       </Media.Body>
+                       <Media.Right>
+                         <Image src={app.image} alt={app.name + " store logo"}/>
+                       </Media.Right>
+                     </Media>
                    </Tab>
                  ))}
               </Tabs>
