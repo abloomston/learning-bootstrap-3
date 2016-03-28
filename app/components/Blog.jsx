@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Button, Glyphicon, Image} from 'react-bootstrap';
+import {Grid, Row, Col, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Pagination} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -63,36 +63,35 @@ const Blog = React.createClass({
           <Row>
             <Col sm={8} className="blog-main">
               {blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
-              <ul className="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li className="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
+              <Pagination
+                  bsSize="medium"
+                  items={5}
+                  first
+                  last
+              />
             </Col>
             <Col sm={4} className="blog-sidebar">
               <section>
                 <h3 className="tpad">Search</h3>
-                <div className="input-group input-group-lg tpad">
-                  <span className="input-group-addon"><Glyphicon glyph="search"/></span>
-                  <input type="text" className="form-control input-lg" placeholder="Search"/>
-                  <span className="input-group-btn">
-                    <button className="btn btn-default" type="button">Go!</button>
-                  </span>
-                </div>
+                <form className="tpad">
+                  <Input
+                      type="text"
+                      bsSize="large"
+                      addonBefore={<Glyphicon glyph="search"/>}
+                      placeholder="Search"
+                      buttonAfter={<Button>Go!</Button>}
+                  />
+                </form>
               </section>
               <section>
                 <h3 className="tpad">Tags</h3>
-                <div className="list-group tpad">
-                  <a href="#" className="list-group-item active"><span className="badge">38</span>All Tags</a>
-                  <a href="#" className="list-group-item"><span className="badge">14</span>Speed Mode</a>
-                  <a href="#" className="list-group-item"><span className="badge">81</span>Eco Friendly</a>
-                  <a href="#" className="list-group-item"><span className="badge">4</span>Safe Mode</a>
-                  <a href="#" className="list-group-item"><span className="badge">27</span>Scenic Mode</a>
-                </div>
+                <ListGroup className="tpad">
+                  <ListGroupItem href="#" active><span className="badge">38</span>All Tags</ListGroupItem>
+                  <ListGroupItem href="#"><span className="badge">14</span>Speed Mode</ListGroupItem>
+                  <ListGroupItem href="#"><span className="badge">81</span>Eco Friendly</ListGroupItem>
+                  <ListGroupItem href="#"><span className="badge">4</span>Safe Mode</ListGroupItem>
+                  <ListGroupItem href="#"><span className="badge">27</span>Scenic Mode</ListGroupItem>
+                </ListGroup>
                 <hr/>
               </section>
               <section>
