@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Row, Col, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Media, Pagination} from 'react-bootstrap';
+import {Grid, Row, Col, Badge, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Media, Pagination} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
@@ -86,11 +86,11 @@ const Blog = React.createClass({
               <section>
                 <h3 className="tpad">Tags</h3>
                 <ListGroup className="tpad">
-                  <ListGroupItem href="#" active><span className="badge">38</span>All Tags</ListGroupItem>
-                  <ListGroupItem href="#"><span className="badge">14</span>Speed Mode</ListGroupItem>
-                  <ListGroupItem href="#"><span className="badge">81</span>Eco Friendly</ListGroupItem>
-                  <ListGroupItem href="#"><span className="badge">4</span>Safe Mode</ListGroupItem>
-                  <ListGroupItem href="#"><span className="badge">27</span>Scenic Mode</ListGroupItem>
+                  <ListGroupItem href="#" active><Badge>38</Badge>All Tags</ListGroupItem>
+                  <ListGroupItem href="#"><Badge>14</Badge>Speed Mode</ListGroupItem>
+                  <ListGroupItem href="#"><Badge>81</Badge>Eco Friendly</ListGroupItem>
+                  <ListGroupItem href="#"><Badge>4</Badge>Safe Mode</ListGroupItem>
+                  <ListGroupItem href="#"><Badge>27</Badge>Scenic Mode</ListGroupItem>
                 </ListGroup>
                 <hr/>
               </section>
