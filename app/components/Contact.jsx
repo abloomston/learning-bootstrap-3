@@ -7,8 +7,22 @@ const Contact = React.createClass({
 
   getInitialState: function() {
     return {
-      showContactModal: false
+      showContactModal: false,
+      contactEmailAddress: '',
+      contactMessage: ''
     };
+  },
+
+  handleUpdateEmailAddress: function (event) {
+    this.setState({
+      contactEmailAddress: event.target.value
+    });
+  },
+
+  handleUpdateMessage: function (event) {
+    this.setState({
+      contactMessage: event.target.value
+    });
   },
 
   sendContact: function() {
@@ -19,7 +33,9 @@ const Contact = React.createClass({
 
   closeContactSent: function() {
     this.setState({
-      showContactModal: false
+      showContactModal: false,
+      contactEmailAddress: '',
+      contactMessage: ''
     });
   },
 
@@ -37,8 +53,12 @@ const Contact = React.createClass({
               <hr/>
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Nunc eleifend leo vitae magna.  Nunc aliquet, augue nec adipiscing interdum, lacus tellus malesuada massa, quis varius mi purus non odio.  <strong>Move Me</strong>:</p>
               <form className="form-horizontal tpad" role="form">
-                <Input type="text" label="Email" labelClassName="col-lg-2" wrapperClassName="col-lg-10" placeholder="Email"/>
-                <Input type="textarea" label="Message" labelClassName="col-lg-2" wrapperClassName="col-lg-10" rows={6} placeholder="Mesage..."/>
+                <Input type="text" label="Email" labelClassName="col-lg-2" wrapperClassName="col-lg-10" placeholder="Email"
+                       onChange={this.handleUpdateEmailAddress} value={this.state.contactEmailAddress}
+                />
+                <Input type="textarea" label="Message" labelClassName="col-lg-2" wrapperClassName="col-lg-10" rows={6} placeholder="Mesage..."
+                       onChange={this.handleUpdateMessage} value={this.state.contactMessage}
+                />
                 <ButtonInput type="submit" bsStyle="default" bsSize="large" wrapperClassName="tpad col-lg-offset-2 col-lg-10" value="Send" onClick={this.sendContact}/>
               </form>
             </Col>
@@ -47,8 +67,16 @@ const Contact = React.createClass({
                 <h3>Thank you for submitting</h3>
               </Modal.Header>
               <Modal.Body>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Mauris ac felis vel velit tristique imperdiet.  Sed id ligula quis est convallis tempor.</p>
-                    <p>The MoveMe Team</p>
+                <h4>Message Sent:</h4>
+                <Row>
+                  <Col xs={4}>Email Address</Col>
+                  <Col xs={8}>{this.state.contactEmailAddress}</Col>
+                </Row>
+                <Row>
+                  <Col xs={4}>Message</Col>
+                  <Col xs={8}>{this.state.contactMessage}</Col>
+                </Row>
+                <p>Thanks, The MoveMe Team</p>
               </Modal.Body>
               <Modal.Footer>
                 <Button onClick={this.closeContactSent}>OK</Button>
