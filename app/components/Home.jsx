@@ -65,7 +65,7 @@ const Home = React.createClass({
               <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/eco.jpg")}/>
                 <h3>Eco Friendly</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
               </Col>
               <div className="clearfix hidden-md hidden-lg"></div>
@@ -78,7 +78,7 @@ const Home = React.createClass({
               <Col sm={6} md={3}>
                 <Image circle responsive src={require("../images/safety.jpg")}/>
                 <h3>Safe</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl.</p>
                 <p><Button bsStyle="default" href="#">View details &raquo;</Button></p>
               </Col>
             </Row>
