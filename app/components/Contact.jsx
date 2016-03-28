@@ -1,9 +1,28 @@
 import React from 'react';
-import {Grid, Row, Col, ButtonInput, Image, Input} from 'react-bootstrap';
+import {Grid, Row, Col, Button, ButtonInput, Image, Input, Modal} from 'react-bootstrap';
 
 import IntroBlock from './IntroBlock.jsx';
 
 const Contact = React.createClass({
+
+  getInitialState: function() {
+    return {
+      showContactModal: false
+    };
+  },
+
+  sendContact: function() {
+    this.setState({
+      showContactModal: true
+    });
+  },
+
+  closeContactSent: function() {
+    this.setState({
+      showContactModal: false
+    });
+  },
+
 	render: function() {
 		return (
       <div>
@@ -20,26 +39,21 @@ const Contact = React.createClass({
               <form className="form-horizontal tpad" role="form">
                 <Input type="text" label="Email" labelClassName="col-lg-2" wrapperClassName="col-lg-10" placeholder="Email"/>
                 <Input type="textarea" label="Message" labelClassName="col-lg-2" wrapperClassName="col-lg-10" rows={6} placeholder="Mesage..."/>
-                <ButtonInput type="submit" bsStyle="default" bsSize="large" wrapperClassName="tpad col-lg-offset-2 col-lg-10" value="Send"/>
+                <ButtonInput type="submit" bsStyle="default" bsSize="large" wrapperClassName="tpad col-lg-offset-2 col-lg-10" value="Send" onClick={this.sendContact}/>
               </form>
             </Col>
-            <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <div className="modal-header">
-                    <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h3 className="modal-title">Thank you for submitting</h3>
-                  </div>
-                  <div className="modal-body">
+            <Modal show={this.state.showContactModal} onHide={this.closeContactSent}>
+              <Modal.Header closeButton>
+                <h3>Thank you for submitting</h3>
+              </Modal.Header>
+              <Modal.Body>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Mauris ac felis vel velit tristique imperdiet.  Sed id ligula quis est convallis tempor.</p>
                     <p>The MoveMe Team</p>
-                  </div>
-                  <div className="modal-footer">
-                    <a href="index.html" className="btn btn-default btn-lg">OK</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button onClick={this.closeContactSent}>OK</Button>
+              </Modal.Footer>
+            </Modal>
             <Col sm={4}>
               <Image circle responsive src={require("../images/office.jpg")}/>
               <hr/>
