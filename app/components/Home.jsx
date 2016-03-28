@@ -34,6 +34,7 @@ const Home = React.createClass({
     ];
 
 		return (
+      /* TODO create and PR <Carousel.Caption> for carousel-caption below */
       /* TODO create and PR <Clearfix mdHidden lgHidden/> for clearfix below */
       <div>
         <Carousel defaultActiveIndex={0} interval={4000}>
