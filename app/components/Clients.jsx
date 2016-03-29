@@ -45,7 +45,7 @@ const Clients = React.createClass({
 
 		return (
       <div>
-        <HeadingBlock/>
+        <HeadingBlock title="Clients"/>
         <Grid className="MainBlock">
           <Row>
             <Col lg={12}>

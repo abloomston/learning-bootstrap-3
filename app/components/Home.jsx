@@ -50,7 +50,7 @@ const Home = React.createClass({
                </div>
              </CarouselItem>))}
         </Carousel>
-        <HeadingBlock/>
+        <HeadingBlock title="Your Travel Companion"/>
         <Grid className="MainBlock">
           <Row>
             <Col lg={12}>

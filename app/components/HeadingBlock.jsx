@@ -12,12 +12,16 @@ const HeadingBlock = props => (
           <Image responsive style={tpad} src={require("../images/moveMe.png")}/>
         </Col>
         <Col xs={9}>
-          <h1>MOVE ME <span className={styles.slogan}>&raquo; Your Travel Companion</span></h1>
+          <h1>MOVE ME <span className={styles.slogan}>&raquo; {props.title}</span></h1>
           <p className="lead">Move Me Blah Blah Blah Yadda Yadda Yadda</p>
         </Col>
       </Row>
     </Grid>
   </div>
 );
+
+HeadingBlock.propTypes = {
+  title: React.PropTypes.string.isRequired
+};
 
 module.exports = HeadingBlock;

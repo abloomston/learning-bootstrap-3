@@ -9,7 +9,7 @@ import styles from '../styles/Contact.css';
 
 const Contact = props => (
   <div className={styles.root}>
-    <HeadingBlock/>
+    <HeadingBlock title="Contact Us"/>
     <div className={styles.map}>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.4503630462154!2d-122.43176838472998!3d37.77948407975867!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580bca0e12fc3%3A0x6223272d4a215f15!2sFoo+Bar%2C+San+Francisco%2C+CA+94115!5e0!3m2!1sen!2sus!4v1458341799154" width="100%" height="100%" frameBorder="0" style={{border:0}} allowFullScreen></iframe>
     </div>

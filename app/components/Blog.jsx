@@ -61,7 +61,7 @@ const Blog = React.createClass({
 
     return (
       <div className={styles.root}>
-        <HeadingBlock/>
+        <HeadingBlock title="Blog"/>
         <Grid className="MainBlock">
           <Row>
             <Col sm={8} className={styles.main}>
