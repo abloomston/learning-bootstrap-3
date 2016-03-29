@@ -2,6 +2,8 @@ import React from 'react';
 import {Grid, Row, Col, Glyphicon, Image, Media, Tabs, Tab} from 'react-bootstrap';
 import _ from 'lodash';
 
+import styles from '../styles/InfoBlock.css';
+
 const InfoBlock = React.createClass({
 
 	render: function() {
@@ -40,7 +42,7 @@ const InfoBlock = React.createClass({
     ];
 
 		return (
-      <div className="info-block">
+      <div className={styles.root}>
         <Grid>
           <Row>
             <Col sm={6}>

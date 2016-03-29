@@ -1,8 +1,10 @@
 import React from 'react';
 import {Grid, Row, Col, Button, Image} from 'react-bootstrap';
 
+import styles from '../styles/MarketingBlock.css';
+
 const MarketingBlock = props => (
-  <div className="marketing-block">
+  <div className={styles.root}>
     <Grid>
       <Row>
         <Col sm={6}>

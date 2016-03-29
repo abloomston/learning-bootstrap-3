@@ -1,0 +1,12 @@
+.root {
+  background: #72a694;
+  padding: 80px 0px 60px 0px;
+}
+
+.root address, .root a, .root p {
+  color: white;
+}
+
+.extraSpacing {
+  padding: 0px 10px 0px 10px;
+}

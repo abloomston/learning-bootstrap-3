@@ -1,18 +1,16 @@
 import React from 'react';
 
-import styles from '../styles/index.jsx';
-
 import NavBar from './NavBar.jsx';
 import MarketingBlock from './MarketingBlock.jsx';
 import InfoBlock from './InfoBlock.jsx';
 import Footer from './Footer.jsx';
 
+import styles from '../styles/Main.css';
+
 const Main = props => (
-  <div>
+  <div className={styles.root}>
     <NavBar/>
-    <div className="main-block">
-      {props.children}
-    </div>
+    {props.children}
     <MarketingBlock/>
     <InfoBlock/>
     <Footer/>

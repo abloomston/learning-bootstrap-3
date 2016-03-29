@@ -3,6 +3,8 @@ import {Grid, Row, Col, Badge, Button, Glyphicon, Image, Input, ListGroup, ListG
 
 import IntroBlock from './IntroBlock.jsx';
 
+import styles from '../styles/Blog.css';
+
 const BlogPost = props => (
   <section>
     <h1><a href={props.full_link}>{props.title}</a></h1>
@@ -57,11 +59,11 @@ const Blog = React.createClass({
     ];
 
     return (
-      <div>
+      <div className={styles.root}>
         <IntroBlock/>
         <Grid className="padded">
           <Row>
-            <Col sm={8} className="blog-main">
+            <Col sm={8} className={styles.main}>
               {blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
               <Pagination
                   bsSize="medium"
@@ -70,7 +72,7 @@ const Blog = React.createClass({
                   last
               />
             </Col>
-            <Col sm={4} className="blog-sidebar">
+            <Col sm={4} className={styles.sidebar}>
               <section>
                 <h3 className="tpad">Search</h3>
                 <form className="tpad">

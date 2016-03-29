@@ -3,6 +3,8 @@ import {Grid, Row, Col, Button, Carousel, CarouselItem, Image} from 'react-boots
 
 import IntroBlock from './IntroBlock.jsx';
 
+import styles from '../styles/Home.css';
+
 const Home = React.createClass({
 	render: function() {
 
@@ -36,11 +38,11 @@ const Home = React.createClass({
 		return (
       /* TODO create and PR <Carousel.Caption> for carousel-caption below */
       /* TODO create and PR <Clearfix mdHidden lgHidden/> for clearfix below */
-      <div>
+      <div className={styles.root}>
         <Carousel defaultActiveIndex={0} interval={4000}>
           {slides.map(slide => (
-          <CarouselItem key={slide.key}>
-            <Image src={slide.image}/>
+          <CarouselItem key={slide.key} className={styles.item}>
+            <Image src={slide.image} className={styles.slideImage}/>
             <div className="carousel-caption">
               <h1>{slide.title}</h1>
               <p>{slide.summary}</p>
