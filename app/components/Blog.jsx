@@ -23,98 +23,64 @@ const BlogPost = props => (
   </section>
 );
 
-const Blog = React.createClass({
-	render: function () {
-
-    const blogPosts = [
-      {
-        key: 1,
-        title: "Enhancing Existing Features",
-        author_link: "#",
-        author_name: "Infinite Skills",
-        date: "Oct 11, 2015 at 11:54 AM",
-        image: require("../images/blog1.jpg"),
-        summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
-        full_link: "#",
-      },
-      {
-        key: 2,
-        title: "Speed Mode Boosted",
-        author_link: "#",
-        author_name: "Infinite Skills",
-        date: "Sept 9, 2015 at 10:54 AM",
-        image: require("../images/blog2.jpg"),
-        summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
-        full_link: "#",
-      },
-      {
-        key: 3,
-        title: "Safe Mode Reached Public Beta",
-        author_link: "#",
-        author_name: "Infinite Skills",
-        date: "July 4, 2015 at 8:54 AM",
-        image: require("../images/blog3.jpg"),
-        summary: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum accumsan nisl.",
-        full_link: "#"
-      }
-    ];
-
-    return (
-      <div className={styles.root}>
-        <HeadingBlock title="Blog"/>
-        <Grid className="MainBlock">
-          <Row>
-            <Col sm={8} className={styles.main}>
-              {blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
-              <Pagination
-                  bsSize="medium"
-                  items={5}
-                  first
-                  last
+const Blog = props => (
+  <div className={styles.root}>
+    <HeadingBlock title="Blog"/>
+    <Grid className="MainBlock">
+      <Row>
+        <Col sm={8} className={styles.main}>
+          {props.blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
+          <Pagination
+              bsSize="medium"
+              items={5}
+              first
+              last
+          />
+        </Col>
+        <Col sm={4} className={styles.sidebar}>
+          <section>
+            <h3 style={tpad}>Search</h3>
+            <form style={tpad}>
+              <Input
+                  type="text"
+                  bsSize="large"
+                  addonBefore={<Glyphicon glyph="search"/>}
+                  placeholder="Search"
+                  buttonAfter={<Button>Go!</Button>}
               />
-            </Col>
-            <Col sm={4} className={styles.sidebar}>
-              <section>
-                <h3 style={tpad}>Search</h3>
-                <form style={tpad}>
-                  <Input
-                      type="text"
-                      bsSize="large"
-                      addonBefore={<Glyphicon glyph="search"/>}
-                      placeholder="Search"
-                      buttonAfter={<Button>Go!</Button>}
-                  />
-                </form>
-              </section>
-              <section>
-                <h3 style={tpad}>Tags</h3>
-                <ListGroup style={tpad}>
-                  <ListGroupItem href="#" active><Badge>38</Badge>All Tags</ListGroupItem>
-                  <ListGroupItem href="#"><Badge>14</Badge>Speed Mode</ListGroupItem>
-                  <ListGroupItem href="#"><Badge>81</Badge>Eco Friendly</ListGroupItem>
-                  <ListGroupItem href="#"><Badge>4</Badge>Safe Mode</ListGroupItem>
-                  <ListGroupItem href="#"><Badge>27</Badge>Scenic Mode</ListGroupItem>
-                </ListGroup>
-                <hr/>
-              </section>
-              <section>
-                <h3 style={tpad}>Latest from Twitter</h3>
-                <Media style={tpad}>
-                  <Media.Left>
-                    <a href="#"><Image src={require("../images/user.jpg")} alt="@jimmy"/></a>
-                  </Media.Left>
-                  <Media.Body>
-                    <Media.Heading componentClass="h4">@Jimmy</Media.Heading>
-                    <p style={bpad}>Can't believe how good this @MoveMe app is, blah blah blah.</p>
-                  </Media.Body>
-                </Media>
-              </section>
-            </Col>
-          </Row>
-        </Grid>
-      </div>
-    );
-  }
-});
+            </form>
+          </section>
+          <section>
+            <h3 style={tpad}>Tags</h3>
+            <ListGroup style={tpad}>
+              <ListGroupItem href="#" active><Badge>38</Badge>All Tags</ListGroupItem>
+              <ListGroupItem href="#"><Badge>14</Badge>Speed Mode</ListGroupItem>
+              <ListGroupItem href="#"><Badge>81</Badge>Eco Friendly</ListGroupItem>
+              <ListGroupItem href="#"><Badge>4</Badge>Safe Mode</ListGroupItem>
+              <ListGroupItem href="#"><Badge>27</Badge>Scenic Mode</ListGroupItem>
+            </ListGroup>
+            <hr/>
+          </section>
+          <section>
+            <h3 style={tpad}>Latest from Twitter</h3>
+            <Media style={tpad}>
+              <Media.Left>
+                <a href="#"><Image src={require("../images/user.jpg")} alt="@jimmy"/></a>
+              </Media.Left>
+              <Media.Body>
+                <Media.Heading componentClass="h4">@Jimmy</Media.Heading>
+                <p style={bpad}>Can't believe how good this @MoveMe app is, blah blah blah.</p>
+              </Media.Body>
+            </Media>
+          </section>
+        </Col>
+      </Row>
+    </Grid>
+  </div>
+);
+
+Blog.propTypes = {
+  blogPosts: React.PropTypes.array.isRequired
+};
 
 module.exports = Blog;
