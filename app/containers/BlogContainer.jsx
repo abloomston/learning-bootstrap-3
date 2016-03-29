@@ -6,6 +6,13 @@ import Blog from '../components/Blog.jsx';
 
 const BlogContainer = React.createClass({
 
+  /*
+     Things we could do better here:
+     - utilize react-router for blog post page navigation
+     - when navigating to another page of blog posts, jump back to top
+     - replace pagination with scrolling down automatically loading more blog posts (nullifying notion of pages)
+   */
+
   getDefaultProps: function() {
     return {
       postsPerPage: 3
