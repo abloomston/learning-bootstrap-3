@@ -31,8 +31,10 @@ const Blog = props => (
         <Col sm={8} className={styles.main}>
           {props.blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
           <Pagination
+              activePage={props.blogActivePage}
               bsSize="medium"
-              items={5}
+              items={props.totalBlogPages}
+              onSelect={(event, selectedEvent) => props.onChangeBlogActivePage(selectedEvent.eventKey)}
               first
               last
           />
@@ -80,7 +82,10 @@ const Blog = props => (
 );
 
 Blog.propTypes = {
-  blogPosts: React.PropTypes.array.isRequired
+  blogPosts: React.PropTypes.array.isRequired,
+  blogActivePage: React.PropTypes.number.isRequired,
+  totalBlogPages: React.PropTypes.number.isRequired,
+  onChangeBlogActivePage: React.PropTypes.func.isRequired
 };
 
 module.exports = Blog;

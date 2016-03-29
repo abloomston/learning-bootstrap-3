@@ -14,21 +14,44 @@ const BlogContainer = React.createClass({
 
   getInitialState: function() {
     return {
-      blogPosts: []
+      blogPosts: [],
+      activePage: 0,
+      totalBlogPosts: 1
     }
   },
 
   componentDidMount: function() {
-    api.getPosts(this.props.postsPerPage, 1).then(function(posts) {
+    api.getPostsTotalCount().then(function (totalCount) {
       this.setState({
-        blogPosts: posts
-      })
+        totalBlogPosts: totalCount
+      });
+      this.getPosts(1);
+    }.bind(this));
+  },
+
+  getPosts: function(activePage) {
+    this.setState({
+      activePage: activePage
+    });
+    const lastIndex = this.state.totalBlogPosts - ((activePage - 1) * this.props.postsPerPage);
+    const firstIndex = lastIndex - this.props.postsPerPage + 1;
+    api.getPosts(lastIndex, firstIndex).then(function(posts) {
+      if (this.state.activePage == activePage) {
+        this.setState({
+          blogPosts: posts
+        })
+      }
     }.bind(this));
   },
 
 	render: function() {
 		return (
-			<Blog blogPosts={this.state.blogPosts}/>
+			<Blog
+          blogPosts={this.state.blogPosts}
+          blogActivePage={this.state.activePage}
+          totalBlogPages={Math.ceil(this.state.totalBlogPosts / this.props.postsPerPage)}
+          onChangeBlogActivePage={this.getPosts}
+      />
 		);
 	}
 });

@@ -2,9 +2,10 @@ import _ from 'lodash';
 import moment from 'moment';
 
 function simulateGetPosts(lastIndex, firstIndex) {
+    firstIndex = Math.max(1, firstIndex);
     return Promise.resolve(_.times(lastIndex - firstIndex + 1, (index) => (
         {
-            key: (lastIndex - index),
+            key: lastIndex - index,
             title: `Post #${lastIndex - index}`,
             author_link: "#",
             author_name: "Infinite Skills",
@@ -16,6 +17,11 @@ function simulateGetPosts(lastIndex, firstIndex) {
     )));
 }
 
+function simulateTotalPosts() {
+    return Promise.resolve(17);
+}
+
 module.exports = {
-    getPosts: simulateGetPosts
+    getPosts: simulateGetPosts,
+    getPostsTotalCount: simulateTotalPosts
 };
