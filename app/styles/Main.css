@@ -29,6 +29,6 @@
     padding-bottom: 30px;
 }
 
-.root :global .padded {
+.root :global .MainBlock {
   padding: 100px 15px;
 }

@@ -44,7 +44,7 @@ const Clients = React.createClass({
 		return (
       <div>
         <IntroBlock/>
-        <Grid className="padded">
+        <Grid className="MainBlock">
           <Row>
             <Col lg={12}>
               <h2>Our Clients</h2>

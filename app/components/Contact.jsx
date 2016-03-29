@@ -20,7 +20,7 @@ const Contact = props => (
         emailAddress={props.contactEmailAddress}
         message={props.contactMessage}
     />}
-    <Grid className="padded">
+    <Grid className="MainBlock">
       <Row>
         <Col sm={8}>
           <ContactForm

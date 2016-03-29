@@ -51,7 +51,7 @@ const Home = React.createClass({
              </CarouselItem>))}
         </Carousel>
         <IntroBlock/>
-        <Grid className="padded">
+        <Grid className="MainBlock">
           <Row>
             <Col lg={12}>
               <h2>FOUR MODES</h2>

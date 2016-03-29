@@ -61,7 +61,7 @@ const Blog = React.createClass({
     return (
       <div className={styles.root}>
         <IntroBlock/>
-        <Grid className="padded">
+        <Grid className="MainBlock">
           <Row>
             <Col sm={8} className={styles.main}>
               {blogPosts.map(blogPost => <BlogPost {...blogPost}/>)}
