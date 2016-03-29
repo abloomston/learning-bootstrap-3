@@ -8,6 +8,8 @@ const InfoBlock = React.createClass({
 
 	render: function() {
 
+    /* data below could be loaded using a mocked service, cf services/blog for an example */
+
     const apps = [
       {
         key: 1,

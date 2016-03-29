@@ -8,6 +8,8 @@ import styles from '../styles/Home.css';
 const Home = React.createClass({
 	render: function() {
 
+    /* data below could be loaded using a mocked service, cf services/blog for an example */
+
     const slides = [
       {
         key: 1,
