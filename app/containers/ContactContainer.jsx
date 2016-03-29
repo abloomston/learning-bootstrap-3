@@ -2,6 +2,8 @@ import React from 'react';
 
 import Contact from '../components/Contact.jsx';
 
+/* TODO sometimes the first click of [Send] reloads the whole page instead of showing modal */
+
 const ContactContainer = React.createClass({
 
   getInitialState: function() {
