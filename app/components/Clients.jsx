@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col, Glyphicon, Image, Panel, PanelGroup, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
-import IntroBlock from './IntroBlock.jsx';
+import HeadingBlock from './HeadingBlock.jsx';
 
 import {bpad, tpad} from '../styles/index.jsx';
 
@@ -45,7 +45,7 @@ const Clients = React.createClass({
 
 		return (
       <div>
-        <IntroBlock/>
+        <HeadingBlock/>
         <Grid className="MainBlock">
           <Row>
             <Col lg={12}>

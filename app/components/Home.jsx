@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col, Button, Carousel, CarouselItem, Image} from 'react-bootstrap';
 
-import IntroBlock from './IntroBlock.jsx';
+import HeadingBlock from './HeadingBlock.jsx';
 
 import styles from '../styles/Home.css';
 
@@ -50,7 +50,7 @@ const Home = React.createClass({
                </div>
              </CarouselItem>))}
         </Carousel>
-        <IntroBlock/>
+        <HeadingBlock/>
         <Grid className="MainBlock">
           <Row>
             <Col lg={12}>

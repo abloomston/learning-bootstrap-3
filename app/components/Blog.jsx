@@ -1,7 +1,7 @@
 import React from 'react';
 import {Grid, Row, Col, Badge, Button, Glyphicon, Image, Input, ListGroup, ListGroupItem, Media, Pagination} from 'react-bootstrap';
 
-import IntroBlock from './IntroBlock.jsx';
+import HeadingBlock from './HeadingBlock.jsx';
 
 import styles from '../styles/Blog.css';
 import {bpad, tpad} from '../styles/index.jsx';
@@ -61,7 +61,7 @@ const Blog = React.createClass({
 
     return (
       <div className={styles.root}>
-        <IntroBlock/>
+        <HeadingBlock/>
         <Grid className="MainBlock">
           <Row>
             <Col sm={8} className={styles.main}>

@@ -1,10 +1,10 @@
 import React from 'react';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 
-import styles from '../styles/IntroBlock.css';
+import styles from '../styles/HeadingBlock.css';
 import {tpad} from '../styles/index.jsx';
 
-const IntroBlock = props => (
+const HeadingBlock = props => (
   <div className={styles.root}>
     <Grid>
       <Row>
@@ -20,4 +20,4 @@ const IntroBlock = props => (
   </div>
 );
 
-module.exports = IntroBlock;
+module.exports = HeadingBlock;
