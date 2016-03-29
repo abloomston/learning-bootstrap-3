@@ -3,6 +3,8 @@ import {Grid, Row, Col, Glyphicon, Image, Panel, PanelGroup, OverlayTrigger, Too
 
 import IntroBlock from './IntroBlock.jsx';
 
+import {bpad, tpad} from '../styles/index.jsx';
+
 const Clients = React.createClass({
 	render: function() {
 
@@ -52,9 +54,9 @@ const Clients = React.createClass({
               <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
             </Col>
           </Row>
-          <Row className="tpad">
+          <Row style={tpad}>
             {clients.map(client => (
-               <Col sm={6} md={3} className="bpad" key={client.name}>
+               <Col sm={6} md={3} style={bpad} key={client.name}>
                  <OverlayTrigger overlay={<Tooltip id={client.name}>{client.name}</Tooltip>} placement="bottom">
                    <Image src={client.logo} alt={client.name + " logo"} responsive/>
                  </OverlayTrigger>

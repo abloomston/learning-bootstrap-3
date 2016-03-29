@@ -4,6 +4,7 @@ import {Grid, Row, Col, Badge, Button, Glyphicon, Image, Input, ListGroup, ListG
 import IntroBlock from './IntroBlock.jsx';
 
 import styles from '../styles/Blog.css';
+import {bpad, tpad} from '../styles/index.jsx';
 
 const BlogPost = props => (
   <section>
@@ -74,8 +75,8 @@ const Blog = React.createClass({
             </Col>
             <Col sm={4} className={styles.sidebar}>
               <section>
-                <h3 className="tpad">Search</h3>
-                <form className="tpad">
+                <h3 style={tpad}>Search</h3>
+                <form style={tpad}>
                   <Input
                       type="text"
                       bsSize="large"
@@ -86,8 +87,8 @@ const Blog = React.createClass({
                 </form>
               </section>
               <section>
-                <h3 className="tpad">Tags</h3>
-                <ListGroup className="tpad">
+                <h3 style={tpad}>Tags</h3>
+                <ListGroup style={tpad}>
                   <ListGroupItem href="#" active><Badge>38</Badge>All Tags</ListGroupItem>
                   <ListGroupItem href="#"><Badge>14</Badge>Speed Mode</ListGroupItem>
                   <ListGroupItem href="#"><Badge>81</Badge>Eco Friendly</ListGroupItem>
@@ -97,14 +98,14 @@ const Blog = React.createClass({
                 <hr/>
               </section>
               <section>
-                <h3 className="tpad">Latest from Twitter</h3>
-                <Media className="tpad">
+                <h3 style={tpad}>Latest from Twitter</h3>
+                <Media style={tpad}>
                   <Media.Left>
                     <a href="#"><Image src={require("../images/user.jpg")} alt="@jimmy"/></a>
                   </Media.Left>
                   <Media.Body>
                     <Media.Heading componentClass="h4">@Jimmy</Media.Heading>
-                    <p className="bpad">Can't believe how good this @MoveMe app is, blah blah blah.</p>
+                    <p style={bpad}>Can't believe how good this @MoveMe app is, blah blah blah.</p>
                   </Media.Body>
                 </Media>
               </section>

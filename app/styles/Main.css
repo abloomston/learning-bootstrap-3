@@ -21,14 +21,6 @@
     border-top: 1px solid #c9c9c9;
 }
 
-.root :global .tpad {
-    padding-top: 20px;
-}
-
-.root :global .bpad {
-    padding-bottom: 30px;
-}
-
 .root :global .MainBlock {
   padding: 100px 15px;
 }

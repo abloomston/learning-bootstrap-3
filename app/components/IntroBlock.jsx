@@ -2,13 +2,14 @@ import React from 'react';
 import {Grid, Row, Col, Image} from 'react-bootstrap';
 
 import styles from '../styles/IntroBlock.css';
+import {tpad} from '../styles/index.jsx';
 
 const IntroBlock = props => (
   <div className={styles.root}>
     <Grid>
       <Row>
         <Col xs={3}>
-          <Image responsive className="tpad" src={require("../images/moveMe.png")}/>
+          <Image responsive style={tpad} src={require("../images/moveMe.png")}/>
         </Col>
         <Col xs={9}>
           <h1>MOVE ME <span className={styles.slogan}>&raquo; Your Travel Companion</span></h1>

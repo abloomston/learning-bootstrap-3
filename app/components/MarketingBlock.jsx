@@ -2,6 +2,7 @@ import React from 'react';
 import {Grid, Row, Col, Button, Image} from 'react-bootstrap';
 
 import styles from '../styles/MarketingBlock.css';
+import {tpad} from '../styles/index.jsx';
 
 const MarketingBlock = props => (
   <div className={styles.root}>
@@ -11,7 +12,7 @@ const MarketingBlock = props => (
           <Image responsive src={require("../images/app.png")}/>
         </Col>
         <Col sm={6}>
-          <h3 className="tpad">MARKETING SLOGAN HERE</h3><hr/>
+          <h3 style={tpad}>MARKETING SLOGAN HERE</h3><hr/>
           <p>Marketing Blah Blah Here. Blah Blah Blah.</p>
           <p><Button bsStyle="primary" bsSize="large" href="#">Get it now!</Button></p>
         </Col>
